@@ -1,0 +1,19 @@
+site_name: ELE217
+nav:
+  - Home: index.md
+  - About: about.md
+  - Lectures: 
+    - Lecture 1: Lectures/Lecture1.md
+    - Lecture 2: Lectures/Lecture2.md
+    - Lecture 3: Lectures/Lecture3.md
+    - Lecture 4: Lectures/Lecture4.md
+  - Labs:
+    - Lab 1: Labs/Lab1.md
+    - Lab 2: Labs/Lab2.md
+  - Setup:
+    - Codeblocks Setup: Setup/Downloading Codeblocks.md
+theme:
+  name: material
+  features:
+    - content.code.copy    
+    - content.code.annotate 
