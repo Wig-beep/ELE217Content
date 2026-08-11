@@ -12,4 +12,5 @@ Variables refers to the data that will be used by the code in various means. C n
 | <code style="color: #005cc5; font-weight: bold;">float</code> | Single-precision floating-point number | `float voltage = 3.3f;` | 32 bits (4 bytes) |
 
 
-[Do i need to go into more detail? should i assume they know matlab, and say matlab doesnt need to have this?]
+[Do i need to go into more detail? should i assume they know matlab, and say matlab doesn't need to have this?]
+

@@ -10,6 +10,7 @@ nav:
   - Labs:
     - Lab 1: Labs/Lab1.md
     - Lab 2: Labs/Lab2.md
+    - Example Lab: Labs/Labexample.md
   - Setup:
     - Codeblocks Setup: Setup/Downloading Codeblocks.md
 theme:
