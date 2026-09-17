@@ -1,3 +1,16 @@
+<!-- 3. The Toggle Script -->
+<script>
+function toggleDeepDive() {
+  var checkBox = document.getElementById("deepDiveCheck");
+  var content = document.getElementById("deepDiveSection");
+  if (checkBox.checked == true) {
+    content.style.display = "block";
+  } else {
+    content.style.display = "none";
+  }
+}
+</script>
+
 # Variables, Data Types, Libraries, Inputs and Output in C
 
 ## Information Example
@@ -20,7 +33,18 @@ Variables refers to the data that will be used by the code in various means. C n
 
 int decimal = 42;
 ```
+<!-- 2. The Hidden Content -->
+<div id="deepDiveSection" markdown="1" style="display: none; border-left: 4px solid #d99100; padding-left: 15px; margin-top: 15px; background-color: #fafafa;">
 
+### Deep Dive: What `#include <stdio.h>` Actually Does
+
+At the start of the lab, we glossed over `#include <stdio.h>` as "the header file needed for `printf()`". Here is what is happening under the hood:
+
+1. **Pre-processor Pass:** Before compilation begins, the C preprocessor (`cpp`) literally copy-pastes the entire contents of `stdio.h` into the top of your source file.
+2. **Function Prototypes:** It tells the compiler the exact memory signature of `printf()` so it knows how many arguments and byte widths to expect on the call stack.
+3. **Register/Peripheral Mapping:** In embedded C, header files perform this same trick to define hardware register addresses (e.g., `#define GPIOA_BASE (0x40020000UL)`).
+
+</div>
 
 
 ## Questions
@@ -72,3 +96,13 @@ function checkBinaryAnswer() {
   }
 }
 </script>
+
+
+<div style="background-color: #f7e1b5; border: 2px solid #d99100; border-radius: 8px; padding: 15px; margin: 25px 0;">
+  <label style="font-weight: bold; font-size: 1.05em; cursor: pointer; display: flex; align-items: center; gap: 10px;">
+    <input type="checkbox" id="deepDiveCheck" onclick="toggleDeepDive()" style="width: 20px; height: 20px; cursor: pointer;">
+    <span> "Worry About It Now" Button</span>
+  </label>
+</div>
+
+

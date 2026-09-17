@@ -2,14 +2,13 @@ site_name: ELE217
 nav:
   - Home: index.md
   - About: about.md
-  - Lectures: 
-    - Lecture 1: Lectures/Lecture1.md
-    - Lecture 2: Lectures/Lecture2.md
-    - Lecture 3: Lectures/Lecture3.md
-    - Lecture 4: Lectures/Lecture4.md
   - Labs:
     - Lab 1: Labs/Lab1.md
     - Lab 2: Labs/Lab2.md
+    - Lab 3: Labs/Lab3.md
+    - Lab 4: Labs/Lab4.md
+    - Lab 5: Labs/Lab5.md
+    - Lab 6: Labs/Lab6.md
     - Example Lab: Labs/Labexample.md
   - Setup:
     - Codeblocks Setup: Setup/Downloading Codeblocks.md
@@ -18,3 +17,11 @@ theme:
   features:
     - content.code.copy    
     - content.code.annotate 
+markdown_extensions:
+  - pymdownx.tabbed:
+      alternate_style: true  # Enables clean Material-styled tabs
+  - md_in_html
+  - attr_list
+plugins:
+  - search
+  - glightbox
