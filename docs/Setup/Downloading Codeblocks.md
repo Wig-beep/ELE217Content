@@ -25,9 +25,9 @@ lightbox: true
 
     • Scroll to the ‘Microsoft Windows' section
 
-    • Select codeblocks-xx.xxmingw-setup.exe and click on Sourceforge.net (this should automatically start the download). NOTE: xx.xx is just whatever the current version number is.
+    • Select codeblocks-xx.xx**mingw**-setup.exe and click on Sourceforge.net (this should automatically start the download). NOTE: xx.xx is just whatever the current version number is.
 
-    • Click ‘Run’ (at the bottom of the screen)
+    • Click ‘Download’ if the download didn't begin automatically.
 
     • Install the Codeblocks application using the install wizard (you might need to minimise the web browser)
 
@@ -35,13 +35,15 @@ lightbox: true
 
     • Click ‘GNU GCC Compiler, then click ‘OK’
 
-
+***
 ## Quickstart
 
 === "Step 1"
     ![Step 1](../Images/1.png){ width="800" }
 
     Open Code::Blocks on your computer, and select "Create a new project" (or existing)
+
+    Move onto Step 2 in the tab above
 === "Step 2"
     ![Step 2](../Images/2.png){ width="400" }
 
@@ -49,31 +51,36 @@ lightbox: true
 === "Step 3"
     ![Step 3](../Images/3.png){ width="400" }
 
-    In the wizard setup, ensure you select cm and continue
+    In the wizard setup, ensure you select **C** and continue
 === "Step 4"
-    ![Step 4](../Images/4.png){ width="400" }
+    ![Step 4](../Images/folderdir.png){ width="400" }
 
-    The compiler should be set up automatically like this, but double check
+    Your project will need a name and a location to go into. All projects should have a new folder.
 === "Step 5"
-    ![Step 5](../Images/5.png){ width="400" }
+    ![Step 5](../Images/4.png){ width="400" }
+
+    The compiler should be set up automatically like this, but double check.
+=== "Step 6"
+    ![Step 6](../Images/5.png){ width="400" }
 
     On the left side of your screen, right click the project, and select "Build options..."
-=== "Step 6"
-    ![Step 6](../Images/6.png){ width="400" }
+=== "Step 7"
+    ![Step 7](../Images/6.png){ width="400" }
 
     Scroll down to warnings, and ensure "Enable all common compiler warnings (overrides many other settings)" is enabled. click OK
 
     Flags determine how the compiler behaves, these are set though the IDE GUI (you’ll see this in a ‘make’ file later in course ).
 
-=== "Step 7"
-    ![Step 7](../Images/7.png){ width="800" }
+=== "Step 8"
+    ![Step 8](../Images/7.png){ width="800" }
 
-    Open main.c, and click "Build and Run" shown. this should compile your code and run it in a terminal.
+    Open main.c (found in /Sources), and click "Build and Run" shown. this should compile your code and run it in a terminal.
 
+***
 ## Compiler settings
 In "Settings" -> "Compiler", make sure the the compiler follows the [-std=c99] standard. This will be important to ensure your code runs the same as everyone elses. 
 
-![Step 8](../Images/8.png){ width="400" }
+![Step 9](../Images/8.png){ width="400" }
 
 
 
@@ -121,6 +128,9 @@ While the program is paused at a breakpoint, you can use these commands to contr
 •	F8 (Next instruction): Similar to F7 but is more detailed, sometimes stepping into assembly instructions. Use F7 for most cases.
 
 •	F4 (Next line of code - skip functions): Skips over function calls, executing the entire function and stopping on the line after it returns. Use this to avoid stepping through functions you know are correct.
+
+### Run to Cursor
+A quick debug method is to use the 'run to cursor'. this involves left clicking the line of code ou want to stop to, then right click -> run to cursor.
 
 ### Watching Variables
 One of the most powerful features of a debugger is the ability to inspect the values of variables in real-time.
